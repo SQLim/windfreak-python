@@ -14,6 +14,7 @@
 * SynthHD PRO v1.4
 * SynthHD v2
 * SynthHD PRO v2
+* SynthNV PRO
 
 ## Installation
 
