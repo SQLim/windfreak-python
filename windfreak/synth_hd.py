@@ -314,7 +314,7 @@ class SynthHDv2Channel(SynthHDChannel):
            Returns:
                float: Channel Spacing setting in Hz
         """
-        return self.read('channelspacing')
+        return self.read('channel_spacing')
 
     @channel_spacing.setter
     def channel_spacing(self,value):
@@ -329,7 +329,7 @@ class SynthHDv2Channel(SynthHDChannel):
         if cs_range is not None and not cs_range['start'] <= value <= cs_range['stop']:
             raise ValueError('Expected float in range [{}, {}] Hz.'.format(
                              cs_range['start'], cs_range['stop']))
-        self.write('channelspacing', value)
+        self.write('channel_spacing', value)
 
 
 class SynthHD(SerialDevice, Sequence):
@@ -357,7 +357,7 @@ class SynthHD(SerialDevice, Sequence):
         'pll_lock':         (bool,  None,      'p'),
         'temperature':      (float, None,      'z'),   # Temperature in Celsius
         'ref_frequency':    (float, '*{:.8f}', '*?'),  # Reference frequency in MHz
-        'channelspacing':   (float, 'i{:.1f}', 'i?'),  # Channel spacing in Hz
+        'channel_spacing':  (float, 'i{:.1f}', 'i?'),  # Channel spacing in Hz
 
         'sweep_freq_low':   (float, 'l{:.8f}', 'l?'),  # Sweep lower frequency in MHz
         'sweep_freq_high':  (float, 'u{:.8f}', 'u?'),  # Sweep upper frequency in MHz

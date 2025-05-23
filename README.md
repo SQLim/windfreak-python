@@ -54,7 +54,7 @@ mamba install windfreak
 ```python
 from windfreak import SynthHD
 
-synth = SynthHD('/dev/ttyACM0')
+synth = SynthHD('/dev/ttyACM0') # Linux 
 synth.init()
 
 # Set channel 0 power and frequency
@@ -65,5 +65,27 @@ synth[0].frequency = 2.e9
 synth[0].enable = True
 ```
 
+### SynthNV PRO
+
+```python
+from windfreak import SynthNVPro
+
+synth = SynthNVPro('COM4') # Windows 
+synth.init()
+
+# Set RFout power and frequency
+synth.power = -10.
+synth.frequency = 2.e9
+
+# Enable RFout
+synth.enable = True
+
+# Get device temperature
+synth.temperature # returns float [e.g., 31.0]
+
+# Check if RFout in enabled
+synth.enable      # returns bool [e.g., False]
+```
+
 ## License
-windfreak-python is covered under the MIT licensed.
+windfreak-python is covered under the MIT license.
