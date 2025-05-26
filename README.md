@@ -1,12 +1,21 @@
-# windfreak-python [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/christian-hahn/windfreak-python/blob/master/LICENSE)
+# windfreak-plus
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/SQLim/windfreak-python/blob/SynthNVPro/LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/SQLim/windfreak-plus.svg?style=social&label=Star&maxAge=3600)]()
+
+This is a fork of [windfreak](https://github.com/christian-hahn/windfreak-python) by Christian Hahn. This fork introduces the following new features and modifications:
+
+* **New Feature 1:** Newly supported device: SynthNV PRO
+* **New Feature 2:** SerialDevice clear method to reset input and output buffers. 
+* **Fixed typos:** Minor typos fixed (e.g., 'mhz' to 'MHz')
 
 ## Abstract
 
-**windfreak** is a pure Python package to facilitate the use of [Windfreak Technologies](https://windfreaktech.com) devices.
+**windfreak-plus** is a pure Python package to facilitate the use of [Windfreak Technologies](https://windfreaktech.com) devices.
 
-**windfreak** requires Python 3.
+**windfreak-plus** requires Python 3.
 
-**windfreak** is MIT licensed.
+**windfreak-plus** is MIT licensed.
 
 ## Supported devices
 
@@ -14,37 +23,20 @@
 * SynthHD PRO v1.4
 * SynthHD v2
 * SynthHD PRO v2
-* SynthNV PRO
+* SynthNV PRO [NEW!]
 
 ## Installation
 
 ### Using `pip`:
 ```text
-pip install windfreak
+pip install git+https://github.com/SQLim/windfreak-python.git@SynthNVPro
 ```
 
 ### Using `setup.py`:
 ```text
-git clone https://github.com/christian-hahn/windfreak-python.git
+git clone https://github.com/SQLim/windfreak-python.git@SynthNVPro
 cd windfreak-python
 python setup.py install
-```
-
-### Using `conda`:
-Add `conda-forge` to your channels with
-```text
-conda config --add channels conda-forge
-conda config --set channel_priority strict
-```
-
-then install the package with `conda`:
-```text
-conda install windfreak
-```
-
-or with `mamba`:
-```text
-mamba install windfreak
 ```
 
 ## Example
@@ -88,4 +80,4 @@ synth.enable      # returns bool [e.g., False]
 ```
 
 ## License
-windfreak-python is covered under the MIT license.
+windfreak-plus is covered under the MIT license.
