@@ -1,6 +1,6 @@
 # windfreak-plus
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/SQLim/windfreak-python/blob/SynthNVPro/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/SQLim/windfreak-python/blob/main/LICENSE)
 [![GitHub Stars](https://img.shields.io/github/stars/SQLim/windfreak-plus.svg?style=social&label=Star&maxAge=3600)](https://github.com/SQLim/windfreak-python)
 
 This is a fork of [windfreak](https://github.com/christian-hahn/windfreak-python) by Christian Hahn. This fork introduces the following new features and modifications:
@@ -29,12 +29,12 @@ This is a fork of [windfreak](https://github.com/christian-hahn/windfreak-python
 
 ### Using `pip`:
 ```text
-pip install git+https://github.com/SQLim/windfreak-python.git@SynthNVPro
+pip install git+https://github.com/SQLim/windfreak-python.git
 ```
 
 ### Using `setup.py`:
 ```text
-git clone https://github.com/SQLim/windfreak-python.git@SynthNVPro
+git clone https://github.com/SQLim/windfreak-python.git
 cd windfreak-python
 python setup.py install
 ```

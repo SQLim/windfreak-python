@@ -13,7 +13,7 @@ setup(
     description='Python package for Windfreak Technologies devices.',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/SQLim/windfreak-python.git@SynthNVPro',
+    url='https://github.com/SQLim/windfreak-python',
     packages=find_packages(exclude=['tests', 'examples']),
     install_requires=[
         'pyserial',
