@@ -1,3 +1,10 @@
+# Copyright (c) 2025 Shao Qi Lim. 
+# All rights reserved for the features implemented in this file.
+#
+# This file contains code that is created in addition to the original code
+# which is licensed under the MIT License (see LICENSE file for details).
+
+
 from .device import SerialDevice
 
 
