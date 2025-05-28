@@ -90,7 +90,7 @@ class SynthNVPro(SerialDevice):
         super().__init__(devpath)
         self._model = None
         self._model = self.model
-        if self.model == 'SynthNV PRO':
+        if self._model == 'SynthNV PRO':
             self._f_range = {'start': 12.5e6, 'stop': 6400.e6, 'step': 0.1}
             self._p_range = {'start': -60., 'stop': 20., 'step': 0.001}
             self._vga_range = {'start': 0, 'stop': 4000, 'step': 1}

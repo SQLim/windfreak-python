@@ -70,16 +70,17 @@ class SerialDevice:
             raise ValueError('Must have +1 more data-type than argument.')
 
         args = ((int(ar) if dt is bool else dt(ar)) for dt, ar in zip(dtype, args))
+        
+        # query 
         ret = self._query(request.format(*args))
-        dtype = dtype[-1] # expected return dtype of read method is the last one (see self.API)
 
-        # converts str representation of 0 and 1 to int and checks for errors 
+        # format query to the correct dtype
+        dtype = dtype[-1] 
         if dtype is bool:
             ret = int(ret) 
             if ret not in (0, 1):
                 raise ValueError('Invalid return value \'{}\' for type bool.'.format(ret))
         
-        # returns datatype of query response
         return dtype(ret)
 
     def dev_clear(self):
@@ -118,4 +119,3 @@ class SerialDevice:
         """
         self._write(data)
         return self._read()
-
