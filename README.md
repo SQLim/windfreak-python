@@ -29,7 +29,7 @@ This is a fork of [windfreak](https://github.com/christian-hahn/windfreak-python
 
 ### Using `pip`:
 ```text
-pip install git+https://github.com/SQLim/windfreak-python.git
+pip install git+https://github.com/SQLim/windfreak-python.git#egg=windfreak-plus
 ```
 
 ### Using `setup.py`:
