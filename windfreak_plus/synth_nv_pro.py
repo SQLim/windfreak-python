@@ -74,7 +74,7 @@ class SynthNVPro(SerialDevice):
 
         # Frequency modulation
         'fm_frequency':       (int,   '<{}',     '<?'),  # FM frequency [1, 5000]
-        'fm_deviation':       (int,   '>{}',     '>?'),  # FM deviation frequency
+        'fm_deviation':       (int,   '>{}',     '>?'),  # FM deviation 
         'fm_num_samples':     (int,   ',{}',     ',?'),  # Number of samples per burst/cycle
         'fm_mod_type':        (int,   ';{}',     ';?'),  # FM type {0: chirp/ext, 1: sine}
         'fm_cont':            (bool,  '/{}',     '/?'),  # Enable continuous FM
@@ -668,7 +668,7 @@ class SynthNVPro(SerialDevice):
         self.write('fm_frequency', value)
 
     @property
-    def fm_dev(self):
+    def fm_deviation(self):
         """Get FM deviation in Hz [1 Hz minimum].
 
         Args:
@@ -676,8 +676,8 @@ class SynthNVPro(SerialDevice):
         """
         return self.read('fm_deviation')
 
-    @fm_dev.setter
-    def fm_dev(self, value):
+    @fm_deviation.setter
+    def fm_deviation(self, value):
         """Set FM deviation in Hz.
 
         Args:
@@ -693,8 +693,8 @@ class SynthNVPro(SerialDevice):
             tuple: tuple of str of modes
         """
         return (
-            'chirp',
-            'sine'
+            'sine',
+            'chirp'
         )
 
     @property
