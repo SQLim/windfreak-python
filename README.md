@@ -44,7 +44,7 @@ python setup.py install
 ### SynthNV PRO
 
 ```python
-from windfreak import SynthNVPro
+from windfreak_plus import SynthNVPro
 
 synth = SynthNVPro('COM4') # Windows 
 synth.init()
@@ -66,7 +66,7 @@ synth.enable      # returns bool [e.g., False]
 ### SynthHD
 
 ```python
-from windfreak import SynthHD
+from windfreak_plus import SynthHD
 
 synth = SynthHD('/dev/ttyACM0') # Linux 
 synth.init()
